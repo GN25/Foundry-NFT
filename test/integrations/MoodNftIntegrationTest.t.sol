@@ -42,9 +42,6 @@ contract MoodNftIntegrationTest is Test {
 
         string memory actualUri = moodNft.tokenURI(0);
 
-        assertEq(
-            keccak256(abi.encodePacked(actualUri)),
-            keccak256(abi.encodePacked(SAD_SVG_URI))
-        );
+        assertEq(keccak256(abi.encodePacked(actualUri)), keccak256(abi.encodePacked(SAD_SVG_URI)));
     }
 }
